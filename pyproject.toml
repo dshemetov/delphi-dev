@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools >= 40.9.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "delphi_dev"
+version = "0.1.0"
+description = "Utilities for Delphi Indicator Development"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ email = "dshemetov@ucdavis.edu" }, { name = "Dmitry Shemetov" }]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+]
+dependencies = [
+  "delphi-utils>=0.3.27",
+  "duckdb>=1.2.2",
+  "epidatpy",
+  "joblib>=1.4.2",
+  "jupyter>=1.1.1",
+  "line-profiler[ipython]>=4.2.0",
+  "matplotlib>=3.7.5",
+  "numba>=0.58.1",
+  "pandas>=2.0.3",
+  "polars>=1.8.2",
+  "python-dotenv>=1.0.1",
+  "scalene>=1.5.51",
+  "scipy>=1.10.1",
+  "sqlalchemy>=2.0.40",
+]
+
+[tool.ruff]
+line-length = 120
+
+[tool.uv.sources]
+epidatpy = { git = "https://github.com/cmu-delphi/epidatpy" }

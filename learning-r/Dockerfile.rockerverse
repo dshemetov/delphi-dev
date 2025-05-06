@@ -1,0 +1,9 @@
+FROM rocker/verse:4.1.3
+
+RUN mkdir /app
+WORKDIR /app
+
+ARG GITHUB_PAT
+ENV GITHUB_PAT=${GITHUB_PAT}
+
+RUN R -e "remotes::install_github('gfkse/bettermc@v1.2.1')"
